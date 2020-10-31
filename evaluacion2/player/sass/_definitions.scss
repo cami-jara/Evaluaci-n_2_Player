@@ -1,0 +1,273 @@
+body{
+  background-color: $section;
+  font-family: $font;
+  color: white;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.w25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+}
+
+.lateral{
+  background-color: $aside;
+  align-items: margin-left;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 100px;
+  width: 350px;
+  height: 500px;
+
+  &_menu {
+    flex: 0 0 10px;
+    max-width: 30px;
+    margin-left: 20px;
+    justify-content: space-between;
+    padding: 50px;
+    flex: auto;
+    height: 5px;
+
+    &_menu-link{
+      flex: 0 0 30px;
+      max-width: 30px;
+      margin-right: 15px;
+
+      img {
+        flex: 0 0 30px;
+        max-width: 30px;
+        align-items: margin-left;
+        justify-content: space-between;
+        margin-left: 10px;
+        justify-content: flex-end;
+      }
+
+      a:link{
+          color: white;
+          text-decoration: underline;
+      }
+    }
+   }
+}
+
+  .contenido{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    margin-left: 50px;
+
+    .cabecera{
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 15px;
+
+      .buscador{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        margin-left: 300px;
+        margin-top: -900px;
+
+        img{
+       @extend .img-fluid;
+          padding: 20px;
+          margin-left: 20px;
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: -20px;
+
+          p{
+           color: grey;
+           font-size: 15px;
+          }
+        }
+      }
+
+        .opciones{
+          flex: 0 0 30%;
+          max-width: 10%;
+          align-items: center;
+          display: flex;
+          margin-left: 1100px;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 15px;
+          margin-top: -900px;
+
+          img{
+             @extend .img-fluid;
+          }
+        }
+      }
+    }
+
+     .titulo{
+       align-items: center;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+        padding: 30px;
+        margin-top: -650px;
+        margin-left: 350px;
+        font-size: 40px;
+     }
+
+     .destacados{
+       flex: 0 0 20%;
+       max-width: 40%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 15px;
+       margin-top: -50px;
+
+       &__titulo{
+         align-items: center;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         flex: 0 0 30px;
+         max-width: 40%;
+         margin-top: -450px;
+         margin-left: 400px;
+         
+         img{
+           @extend .img-fluid;
+           margin-left: 750px;
+           margin-top: -50px;
+         }
+       }
+
+       .destacados__lista{
+         flex: 0 0 40%;
+         max-width: 40%;
+         display: flex;
+         align-items: left;
+         justify-content: space-between;
+         margin-top: -50px;
+         margin-right: 100px;
+
+         &_lista-item{
+           flex: 0 0 30px;
+           max-width: 30px;
+           margin-right: 105px;
+         }
+
+         img{
+           margin-left: 50px;
+         }
+         .titulo{
+           font-size: 20px;
+           margin-left: 50px;
+           text-align: left;
+           margin-top: 5px;
+         }
+         .artista{
+           font-size: 15px;
+           color: grey;
+           margin-left: 80px;
+           margin-top: -40px;
+           text-align: left;
+         }
+       }
+
+      }
+
+
+
+.reproductor{
+   background-color: $footer;
+   border-color: white;
+   border: 2px;
+    height: 100px;
+
+   .cancion{
+     img{
+       @extend .img-fluid;
+       margin: 20px;
+     }
+
+     .nombre{
+       margin-left: 100px;
+       margin-top: -75px;
+       h4{
+         font-family: $font;
+       }
+
+       p{
+         color: rgba(white, 0.5);
+         margin-top: -10px;
+       }
+     }
+   }
+
+   .botones{
+     flex: 0 0 20%;
+     max-width: 20%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-left: 450px;
+     margin-top: -50px;
+
+
+     &_botones__button-prev{
+       img{
+         @extend .img-fluid;
+       }
+     }
+
+     &_botones__button-play{
+       img{
+         @extend .img-fluid;
+         border-radius: 20px 20px 20px 20px;
+         position: relative;
+         width: 20vh;
+         height: 20vh;
+       }
+     }
+
+     &_botones__button-next{
+       img{
+         @extend .img-fluid;
+       }
+     }
+   }
+
+   .progreso{
+     flex: 0 0 20%;
+     max-width: 30%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-left: 850px;
+     margin-top: -20px;
+
+     &__tiempo{
+     }
+
+     &_linea{
+       margin: 1px;
+       transform: scale(0);
+       transition: all 0.4s ease-in;
+       color: rgba(white, 0.5);
+     }
+
+     &__tiempo{
+
+     }
+   }
+}
